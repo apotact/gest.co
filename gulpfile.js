@@ -92,8 +92,10 @@ gulp.task('js-min', ['js'], function () {
 })
 
 gulp.task('deploy', function() {
-  return gulp.src('dist/**/*')
+  return gulp.src('src/**/*')
     .pipe(deploy({
-      repository: 'getgest@banks.dreamhost.com:gest.git'
+      repository: 'getgest@banks.dreamhost.com:gest.git',
+      verbose: true,
+      prefix: 'src'
       }));
     });
