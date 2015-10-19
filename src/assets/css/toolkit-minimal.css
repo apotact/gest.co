@@ -360,7 +360,8 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "freight-sans-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-family: "freight-sans-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 100;
   line-height: 1.2;
   color: inherit;
@@ -8306,7 +8307,7 @@ fieldset[disabled] .block-inverse .btn-outline.btn-default.active {
 }
 .h1.block-title,
 h1.block-title {
-  font-size: 56px;
+  font-size: 40px;
   line-height: 1;
 }
 .block .lead {

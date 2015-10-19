@@ -24,6 +24,37 @@
   animation-delay: 0.2s;
 }
 
+.store {
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 1000em;
+  color: #fff;
+  background-color: #efefef !important;
+}
+
+.navbar-logo {
+  padding-top: 3px;
+}
+
+.block-light {
+  background: #efefef;
+  color: #333;
+}
+
+.gest-hero-img {
+  width: 80%;
+}
+
+@media (min-width: 768px) {
+  .gest-hero-img {
+    width: 45%;
+    margin-top: -20px;
+    height: 460px;
+    overflow: hidden;
+  }
+}
+
+
 ::selection{
 	color: #efefef;
 	background: #eea236;
