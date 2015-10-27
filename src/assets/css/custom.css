@@ -3,6 +3,56 @@
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 
+.social-svg {
+  fill: #aaaaaa;
+  opacity: .3;
+}
+
+.social-svg:hover {
+  fill: #bbbbbb;
+  opacity: .4;
+}
+.play-video,svg 
+.play-video {
+  background-size: 20px 20px;
+  background-image: url("/assets/img/right-arrow-circle.svg");
+  background-position: left center;
+  padding-left: 25px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  color: #777;
+  text-decoration: none;
+}
+.modal-backdrop
+{
+  opacity:0.85 !important;
+}
+
+.play-video:focus,
+.play-video:hover {
+  color: #333;
+  text-decoration: none;
+
+}
+
+.stop-video {
+  background-size: 20px 20px;
+  background-image: url("/assets/img/close.svg");
+  background-position: left center;
+  padding-left: 25px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  color: #fff;
+  fill: #fff;
+}
+
+.stop-video:focus,
+.stop-video:hover {
+  text-decoration: none;
+  color: #cdcdcd;
+}
+
 .fade-in {
   opacity:0;  /* make things invisible upon start */
   -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
@@ -42,15 +92,24 @@
 }
 
 .gest-hero-img {
-  width: 80%;
+  width: 70%;
+  margin-bottom: -120px;
 }
 
 @media (min-width: 768px) {
   .gest-hero-img {
-    width: 45%;
-    margin-top: -20px;
-    height: 460px;
-    overflow: hidden;
+    width: 50%;
+    margin-top: -30px;
+    margin-bottom: -80px;
+    height: 480px;
+  }
+}
+@media (min-width: 991px) {
+  .gest-hero-img {
+    width: 50%;
+    margin-top: -120px;
+    margin-bottom: -80px;
+    height: 480px;
   }
 }
 

@@ -14,8 +14,8 @@
 
 		<link rel="icon" href="/assets/img/favicon.png">
     <link href="/assets/css/toolkit-minimal.css" rel="stylesheet">
-    <link href="/assets/css/custom.css" rel="stylesheet">
     <link href="/assets/css/application-minimal.css" rel="stylesheet">
+    <link href="/assets/css/custom.css" rel="stylesheet">
   </head>
 
 <body>
@@ -37,31 +37,53 @@
     <div class="navbar-collapse collapse text-uppercase">
       <ul class="nav navbar-nav navbar-right">
         <li >
+					<a href="//facebook.com/trygest" target="_blank"><img class="social-svg" src="/assets/img/facebook.svg" width="20px"/></a>
+        </li>
+        <li >
+					<a href="//twitter.com/trygest" target="_blank"><img class="social-svg" src="/assets/img/twitter.svg" width="20px"/></a>
+        </li>
+        <li >
           <a href="/technology">Technology</a>
         </li>
         <li >
           <a href="/about">About Us</a>
         </li>
         <li >
-					<a href="/order" class="store">buy gest</a>
+					<a href="https://www.kickstarter.com/projects/asdffilms/886003361?token=4c5da7fd" class="store" target="_blank">buy gest</a>
         </li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
 </nav>
 
-<div class="block block-overflow-hidden p-b-0 p-t ">
+<div class="block block-overflow-hidden p-b-xl p-t-xl ">
   <div class="container">
     <div class="row">
 			<div class='col-xs-12 text-xs-center col-sm-6 text-sm-right'>
 				<h1 class="block-title">Work with your hands</h1>
 				<p class='lead text-muted'>Gest is a digital toolkit that allows you to work with your hands in a more intuitive way.</p>
+				<p class='lead text-muted'>
+				<a class='play-video' data-toggle="modal"	href="#play-video">Play Video</a>
+				</p>
 			</div>
-      <div class="col-xs-10 col-sm-3 gest-hero-img">
+      <div class="col-xs-10 col-xs-offset-1	col-sm-6 col-sm-offset-0 gest-hero-img">
         <img class="img-responsive" src="/assets/img/black-five-arm.jpg">
       </div>
     </div>
   </div>
+</div>
+
+<div class="modal fade" id="play-video" tabindex="-1">
+	<div class="container text-center">
+		<div class="row p-t-lg">
+			<div class="col-sm-12">
+				<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://player.vimeo.com/video/143556093' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+				<p class="p-t">
+				<a class='stop-video' data-toggle="modal"	href="#play-video">Close</a>
+				</p>
+			</div>
+		</div>
+	</div>
 </div>
 
 
@@ -69,7 +91,7 @@
   <div class="container-fluid">
    <blockquote class="pull-quote">
       <p class="fade-in fast m-t-0">We're live on Kickstarter!
-			<button type="button" class="btn btn-pill btn-success m-l">Buy Gest</button>
+			<a href="https://www.kickstarter.com/projects/asdffilms/886003361?token=4c5da7fd" class="store" target="_blank"><button type="button" class="btn btn-pill btn-success m-l">Buy Gest</button></a>
       </p>
     </blockquote>
   </div>
@@ -114,7 +136,7 @@
 	<div class="container-fluid">
 		<div class='block-foreground'>
 				<p class="lead">
-					Join our mailing list and you'll be the first to know.
+					Join our mailing list to stay updated.
 				</p>
 
 				<form class="validate form-inline" action="//apotact.us3.list-manage.com/subscribe/post?u=28651018d03bf1e7c3f1de3d1&amp;id=ac78bf7fdc" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" validate>
@@ -154,10 +176,8 @@
       <div class="col-sm-2 m-b">
         <ul class="list-unstyled list-spaced">
           <li><h6 class="text-uppercase">Social</h6></li>
-          <li>Twitter</li>
-          <li>Facebook</li>
-          <li>Instagram</li>
-          <li>Blog</li>
+					<li><a href="//twitter.com/trygest">Twitter</a></li>
+					<li><a href="//facebook.com/trygest">Facebook</a></li>
         </ul>
       </div>
 			<div class='col-sm-6 m-b text-xs-left text-sm-right'>
@@ -173,6 +193,7 @@
     <script src="./assets/js/jquery.min.js"></script>
     <script src="./assets/js/toolkit.js"></script>
     <script src="./assets/js/application.js"></script>
+    <script src="./assets/js/custom.js"></script>
 
 		<!-- Google Analytics -->
 		<script>
