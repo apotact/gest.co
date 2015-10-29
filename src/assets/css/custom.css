@@ -20,8 +20,9 @@
   padding-left: 25px;
   display: inline-block;
   background-repeat: no-repeat;
-  color: #777;
+  color: #000;
   text-decoration: none;
+opacity: .6;
 }
 .modal-backdrop
 {
@@ -30,7 +31,8 @@
 
 .play-video:focus,
 .play-video:hover {
-  color: #333;
+	color: #000;
+	opacity: 9;
   text-decoration: none;
 
 }
