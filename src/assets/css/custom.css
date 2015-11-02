@@ -36,6 +36,25 @@ opacity: .6;
   text-decoration: none;
 
 }
+.linkedin,svg 
+.linkedin{
+  background-size: 20px 20px;
+  background-image: url("/assets/img/linkedin.svg");
+  background-position: left center;
+  padding-left: 25px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  color: #000;
+  text-decoration: none;
+opacity: .6;
+}
+.linkedin:focus,
+.linkedin:hover {
+	color: #000;
+	opacity: 9;
+  text-decoration: none;
+
+}
 
 .stop-video {
   background-size: 20px 20px;
