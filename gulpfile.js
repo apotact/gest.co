@@ -95,7 +95,7 @@ gulp.task('deploy', function() {
   return gulp.src('src/**/*')
     .pipe(deploy({
       repository: 'getgest@banks.dreamhost.com:gest.git',
-      verbose: true,
+      verbose: false,
       prefix: 'src'
       }));
     });
