@@ -51,6 +51,7 @@
       avatar: 'https://lh5.googleusercontent.com/-hL_Bgjw3xq4/AAAAAAAAAAI/AAAAAAAAAIE/FMjR0lwYPW4/photo.jpg',
 		  goToFirstEvent: true,
       timekitFindTime: {
+				length: '30 minutes',
         filters: {
           and: [
             {
@@ -59,11 +60,34 @@
             {
               exclude_weekend: { }
             }
-          ]
+          ],
+				 or: [
+										{
+											specific_time: {
+												start: '00',
+												end: '12'
+											}
+										},
+										{
+											specific_time: {
+												start: '13',
+												end: '24'
+											}
+										}
+									],
+				 after: [
+					 { "take_random": {"number": 25}}
+				]
         },
-        length: '30 minutes'
-      }
-    }
+			},
+			bookingFields: {
+				phone: {
+					enabled: true,
+					placeholder: "Your phone number",
+					required: false
+				}
+			}
+		}
   </script>
 </div>
 		</div>
