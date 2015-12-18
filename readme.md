@@ -1,11 +1,57 @@
 
 ### Setup
 
+#### Dependencies
+
+node, npm, gulp
+
+#### Getting started
+
+run `npm install` in the repos root dir
+
+#### Deploying to production
+
 Server is set up with a prime and hub repo as outlined at
 http://joemaller.com/990/a-web-focused-git-workflow/
 
-compile, minify etc, all source files into the `dist` folder. then `gulp deploy`
-will push these changes to the server
+Use `gulp deploy` to generate the site into `dist` and then automatically push
+to the remote live repo
 
-may need to clone the remote repo into `dist` before deploying, maybe do this
-through gulp
+### Building the site
+
+Use gulp to run various tasks related to moving, building, and minifying files.
+
+`gulp compile`
+
+`gulp deploy` 
+
+`gulp server`
+
+See `gulpfile.js` for more information
+
+### Hierarchy
+
+All sources files can be found in `src` directory with the following structure:
+
+```
+├── assets
+│   ├── fonts
+│   └── img
+├── js
+│   ├── bootstrap
+│   └── custom
+├── less
+│   ├── bootstrap
+│   │   └── mixins
+│   └── custom
+│       └── mixins
+└── partials
+```
+
+The `assets` directory has files that don't need any sort of compilation or minification, and
+instead only need to be copied to the `dist` folder when building the site.
+
+Most customization to the site should happen in `less/custom`.
+
+Pages are located in `src`, and all partial templates used are located under
+`partials`

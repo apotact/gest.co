@@ -1,0 +1,358 @@
+// Bootstrap mixins
+@import "./bootstrap/mixins.less";
+@import "./custom/mixins.less";
+
+// Reset and dependencies
+@import "./bootstrap/normalize.less";
+@import "./bootstrap/print.less";
+
+// Core CSS
+@import "./bootstrap/scaffolding.less";
+@import "./bootstrap/type.less";
+@import "./bootstrap/code.less";
+@import "./bootstrap/grid.less";
+@import "./bootstrap/tables.less";
+@import "./bootstrap/forms.less";
+@import "./bootstrap/buttons.less";
+
+// Components
+@import "./bootstrap/component-animations.less";
+@import "./bootstrap/dropdowns.less";
+@import "./bootstrap/button-groups.less";
+@import "./bootstrap/input-groups.less";
+@import "./bootstrap/navs.less";
+@import "./bootstrap/navbar.less";
+@import "./bootstrap/breadcrumbs.less";
+@import "./bootstrap/pagination.less";
+@import "./bootstrap/pager.less";
+@import "./bootstrap/labels.less";
+@import "./bootstrap/badges.less";
+@import "./bootstrap/jumbotron.less";
+@import "./bootstrap/thumbnails.less";
+@import "./bootstrap/alerts.less";
+@import "./bootstrap/progress-bars.less";
+@import "./bootstrap/media.less";
+@import "./bootstrap/list-group.less";
+@import "./bootstrap/panels.less";
+@import "./bootstrap/responsive-embed.less";
+@import "./bootstrap/wells.less";
+
+// Extended Bootstrap components
+@import "./custom/type-custom.less";
+@import "./custom/alerts-custom.less";
+@import "./custom/buttons-custom.less";
+@import "./custom/nav-heading.less";
+@import "./custom/navbar-utilities.less";
+
+// Components w/ JavaScript
+@import "./bootstrap/modals.less";
+@import "./bootstrap/tooltip.less";
+@import "./bootstrap/popovers.less";
+@import "./bootstrap/carousel.less";
+
+// Utility classes
+@import "./bootstrap/utilities.less";
+@import "./bootstrap/responsive-utilities.less";
+
+// Custom theme components
+@import "./custom/icons.less";
+@import "./custom/utilities-spacer.less";
+@import "./custom/text-inherit.less";
+@import "./custom/nav-bordered.less";
+@import "./custom/buttons-outline.less";
+@import "./custom/buttons-radius.less";
+@import "./custom/forms-custom.less";
+@import "./custom/container-custom.less";
+@import "./custom/block.less";
+@import "./custom/navbar-transparent.less";
+@import "./custom/carousel-light.less";
+@import "./custom/callouts.less";
+@import "./custom/featured-list.less";
+@import "./custom/zoom.less";
+@import "./custom/text-ribbon.less";
+@import "./custom/iconlist.less";
+@import "./custom/panels-bold.less";
+@import "./custom/statcard.less";
+@import "./custom/pull-quote.less";
+@import "./custom/stage.less";
+
+/*
+ * Minimal Application level overrides
+ * (things that dont make sense in a toolkit :)
+ * copyright @colossal 2015
+ */
+
+.block {
+ overflow: hidden;
+}
+
+
+/* navbar */
+.app-navbar {
+  font-size: 13px;
+  letter-spacing: .15em;
+}
+.app-navbar .navbar-brand {
+  font-size: 13px;
+}
+
+
+/* intro block */
+.app-block-intro {
+  padding-top: 20px;
+}
+.app-block-intro img {
+  width: 80%;
+  margin-bottom: -45%;
+}
+
+/* block img */
+.app-block-game img,
+.app-block-stats img {
+  width: 100%;
+}
+@media (max-width: 480px) {
+  .app-block-game-img {
+    transform: scale(1.5) !important;
+  }
+}
+
+/* stats hr */
+.app-block-stats hr {
+  width: calc(70% + 60px);
+}
+
+/* design block */
+.app-block-design > .container > .row {
+  z-index: 2;
+}
+
+.app-block-design-img {
+  float: left;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .app-block-design-img {
+    margin-top: -320px;
+    margin-left: 0;
+  }
+}
+
+/* footer block */
+.app-block-footer {
+  background-color: rgb(27, 28, 29);
+  color: #444;
+  color: rgba(116, 119, 123, .5);
+}
+
+
+/* transforms */
+.app-translate-15 {
+  -webkit-transform: translateY(15px);
+      -ms-transform: translateY(15px);
+          transform: translateY(15px);
+}
+.app-translate-50 {
+  -webkit-transform: translateY(50px);
+      -ms-transform: translateY(50px);
+          transform: translateY(50px);
+}
+.app-translate-5 {
+  -webkit-transform: translateY(5%);
+      -ms-transform: translateY(5%);
+          transform: translateY(5%);
+}
+.app-translate-10 {
+  -webkit-transform: translateY(10%);
+      -ms-transform: translateY(10%);
+          transform: translateY(10%);
+}
+
+
+/* brand */
+
+@media (max-width: 400px) {
+  .app-myphone-brand {
+    font-size: 46px !important;
+  }
+}
+@media (max-width: 350px) {
+  .app-myphone-brand {
+    font-size: 42px !important;
+  }
+}
+
+
+//
+// Custom styles
+//
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+
+  &.text-uppercase {
+    letter-spacing: .15em;
+  }
+
+  small,
+  .small {
+    font-weight: inherit;
+  }
+}
+
+h6, .h6 {
+  margin-bottom: (@spacer-y * .25);
+  color: lighten(@gray, 40%);
+  text-transform: uppercase;
+}
+
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.social-svg {
+  fill: #aaaaaa;
+  opacity: .3;
+}
+
+.social-svg:hover {
+  fill: #bbbbbb;
+  opacity: .4;
+}
+.play-video,svg 
+.play-video {
+  background-size: 20px 20px;
+  background-image: url("/img/right-arrow-circle.svg");
+  background-position: left center;
+  padding-left: 25px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  color: #000;
+  text-decoration: none;
+opacity: .6;
+}
+.modal-backdrop
+{
+  opacity:0.85 !important;
+}
+
+.play-video:focus,
+.play-video:hover {
+	color: #000;
+	opacity: 9;
+  text-decoration: none;
+
+}
+.linkedin,svg 
+.linkedin{
+  background-size: 20px 20px;
+  background-image: url("/img/linkedin.svg");
+  background-position: left center;
+  padding-left: 25px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  color: #000;
+  text-decoration: none;
+opacity: .6;
+}
+.linkedin:focus,
+.linkedin:hover {
+	color: #000;
+	opacity: 9;
+  text-decoration: none;
+
+}
+
+.stop-video {
+  background-size: 20px 20px;
+  background-image: url("/img/close.svg");
+  background-position: left center;
+  padding-left: 25px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  color: #fff;
+  fill: #fff;
+}
+
+.stop-video:focus,
+.stop-video:hover {
+  text-decoration: none;
+  color: #cdcdcd;
+}
+
+.fade-in {
+  opacity:0;  /* make things invisible upon start */
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.fade-in.fast{
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+.store {
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 1000em;
+  color: #fff;
+  background-color: #efefef !important;
+}
+
+.navbar-logo {
+  padding-top: 3px;
+}
+
+.block-light {
+  background: #efefef;
+  color: #333;
+}
+
+.gest-hero-img {
+  width: 70%;
+  margin-bottom: -120px;
+}
+
+@media (min-width: 768px) {
+  .gest-hero-img {
+    width: 50%;
+    margin-top: -30px;
+    margin-bottom: -80px;
+    height: 480px;
+  }
+}
+@media (min-width: 991px) {
+  .gest-hero-img {
+    width: 50%;
+    margin-top: -120px;
+    margin-bottom: -80px;
+    height: 480px;
+  }
+}
+
+
+::selection{
+	color: #efefef;
+	background: #eea236;
+}
+
+:active {
+	outline: none !important;
+}
+
+* {
+	outline: none !important;
+}

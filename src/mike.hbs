@@ -1,0 +1,76 @@
+{{> header}}
+{{> nav}}
+
+<body style="background: #efefef !important;">  
+<div class="block block-light  m-x-auto p-a-0 text-center">
+  <div class="container-fluid">
+		<div class='row'>
+			<div class='col col-xs-12 col-sm-6 col-sm-offset-3'>
+<div id="bookingjs">
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="//dbhpllgef527b.cloudfront.net/booking-js/v1/booking.min.js" defer></script>
+  <script type="text/javascript">
+    window.timekitBookingConfig = {
+      name: 'Mike Pfister',
+      email: 'mike@apotact.com',
+      apiToken: 'L5FyzeWqX5O7BBwuTKSNlOmF0NHvcLSD',
+      calendar: '7be79f55-fb83-425b-a839-8c1c0dfcb7d5',
+      avatar: 'https://lh5.googleusercontent.com/-hL_Bgjw3xq4/AAAAAAAAAAI/AAAAAAAAAIE/FMjR0lwYPW4/photo.jpg',
+		  goToFirstEvent: true,
+      timekitFindTime: {
+				length: '30 minutes',
+        filters: {
+          and: [
+            {
+              business_hours: { }
+            },
+            {
+              exclude_weekend: { }
+            }
+          ],
+				 or: [
+										{
+											specific_time: {
+												start: '00',
+												end: '12'
+											}
+										},
+										{
+											specific_time: {
+												start: '13',
+												end: '24'
+											}
+										}
+									],
+				 after: [
+					 { "take_random": {"number": 25}}
+				]
+        },
+			},
+			bookingFields: {
+				phone: {
+					enabled: true,
+					placeholder: "Your phone number",
+					required: false
+				}
+			}
+		}
+  </script>
+</div>
+		</div>
+		</div>
+  </div>
+</div>
+
+
+		<!-- Google Analytics -->
+		<script>
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', 'UA-60560705-4', 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script async src='//www.google-analytics.com/analytics.js'></script>
+		<!-- End Google Analytics -->
+  </body>
+</html>
+
