@@ -129,11 +129,19 @@ gulp.task('compile', ['less-min', 'js-min', 'cp:assets'], function () {
 });
 
 
+gulp.task('test-deploy', ['compile'], function() {
+	return gulp.src('dist/**/*')
+		.pipe(deploy({
+			repository: 'git@github.com:apotact/gest.co-staging.git',
+			verbose: true,
+			debug: true
+			}));
+});
+
 gulp.task('deploy', ['compile'], function() {
-  //return gulp.src('src/**/*')
-    //.pipe(deploy({
-      //repository: 'getgest@banks.dreamhost.com:gest.git',
-      //verbose: false,
-      //prefix: 'src'
-      //}));
+	return gulp.src('dist/**/*')
+		.pipe(deploy({
+			repository: 'getgest@banks.dreamhost.com:gest.git',
+			verbose: false
+			}));
 });
