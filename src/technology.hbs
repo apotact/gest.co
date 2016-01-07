@@ -1,136 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <meta name="author" content="">
-  <title>Gest</title>
-  
-  <script src="https://use.typekit.net/gvm3boh.js"></script>
-  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  {{> header }}
+    <link href="/onescroll.css" rel="stylesheet">
+  {{> header_end }} 
 
-  <link rel="icon" href="/img/favicon.png">
-  <link href="/css/toolkit-minimal.css" rel="stylesheet">
+  {{> nav }}
 
-  <!-- Facebook Pixel Code -->
-  <script>
-  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-  document,'script','//connect.facebook.net/en_US/fbevents.js');
+<!-- moile version here -->
 
-  fbq('init', '1011708035546093');
-  fbq('track', "PageView");</script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1011708035546093&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Facebook Pixel Code -->
 
-  <link href="/onescroll.css" rel="stylesheet">
-   
-</head>
+</div> <!-- end shelf for mobile -->
 
-<body>
-<div class="stage-shelf stage-shelf-right hidden" id="sidebar">
-  <ul class="nav nav-bordered nav-stacked">
-    <li class="nav-header">Company</li>
-		<li> <a href="https://shop.trycelery.com/page/55a02a4af2de0e03005becea" data-celery="55a02a4af2de0e03005becea" data-celery-version="v2">Pre-order Now</a> </li>
-
-    <li class=""> <a href="/about">About us</a> </li>
-		<li><a href="//gest.totemapp.com" target="_blank">Press and media</a></li>
-
-    <li class="nav-divider"></li>
-
-    <li class="nav-header">Social</li>
-			<li >
-				<a href="//facebook.com/trygest" target="_blank"><img class="social-svg" src="/img/facebook.svg" width="20px"/> Facebook</a>
-			</li>
-			<li >
-				<a href="//twitter.com/trygest" target="_blank"><img class="social-svg" src="/img/twitter.svg" width="20px"/> Twitter</a>
-			</li>
-  </ul>
-</div>
-
-<div class='stage' id='stage'> <!-- don't forget to close this later -->
-	
-<nav class="navbar navbar-default navbar-padded text-uppercase app-navbar">
-  <div class="container fade-in fast" data-transition="entrance" style="transform: translateY(-70px)"> <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed p-x-0"
-              data-target="#stage" data-toggle="stage" data-distance="-250">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a href="/" class='navbar-brand'>
-        <span><img src="/img/gest-logo-sm.png" alt="gest logo"
-          class="w-md navbar-logo"/></span>
-      </a>
-    </div>
-    <div class="navbar-collapse collapse text-uppercase">
-      <ul class="nav navbar-nav navbar-right">
-        <li >
-					<a href="//facebook.com/trygest" target="_blank"><img class="social-svg" src="/img/facebook.svg" width="20px"/></a>
-        </li>
-        <li >
-					<a href="//twitter.com/trygest" target="_blank"><img class="social-svg" src="/img/twitter.svg" width="20px"/></a>
-        </li>
-        <li >
-          <a href="/about">About Us</a>
-        </li>
-		<li> <a class='store' href="https://shop.trycelery.com/page/55a02a4af2de0e03005becea" data-celery="55a02a4af2de0e03005becea" data-celery-version="v2">Pre-order Now</a> </li>
-      </ul>
-    </div><!--/.nav-collapse -->
-
-  </div>
-</nav>
-
-<div class="row hidden-xs">
-  <div class="col-xs-12 col-sm-6 col-sm-offset-2">
-    <video class='fade-in fast' id="gblow" width=100%" >
+<div class="row hidden-xs pos-f">
+  <div class="col-sm-6 col-md-7 col-lg-6 pos-f">
+    <video class='fade-in fast ' id="gblow" width=100%" >
        <source src="/img/blowout.mp4" type="video/mp4">
        Your browser does not support this type of video.
     </video>
   </div>
 </div>
 
-
-<div class="blowout">
-
+<div class="blowout hidden-xs text-right" >
   <section>
-  <div class="block-fill-height p-b-xl p-t-xl">
-    <div class="row">
-      <div class="specs col-xs-12 col-sm-6 col-sm-offset-2">
-
-          Paused vertical section
+  <div class="block block-fill-height p-b-xl p-t-xl p-r-lg" style="background-color: transparent">
+    <div class="row p-r-lg">
+      <div class="specs col-xs-5 col-xs-offset-7">
+				<h1 class="block-title">Amazing technology.</h1>
+				<p class='lead text-muted'>Gest is a digital toolkit that allows you to work with your hands in a more intuitive way.</p>
+				<p>
+        The San Francisco Bay Area faces a housing crisis.  With far more people
+        wanting to live here than there are homes, rents have risen to record
+        heights.  However, building new housing isn't easy, with concerns about
+        traffic, views, gentrification, and open space, to name just a few.
+        Still, the problem can be solved, though not by San Francisco alone.
+        You'll have to plan and build regionally.
+				</p>
 
       </div>
     </div>
   </div>
   </section>
-  
   <section>
-  <div class="block-fill-height p-b-xl p-t-xl">
-    <div class="row">
-      <div class="specs col-xs-12 col-sm-6 col-sm-offset-2">
-
-          Pause at battery view
+  <div class="block block-fill-height p-b-xl p-t-xl p-r-lg" style="background-color: transparent">
+    <div class="row p-r-lg">
+      <div class="specs col-xs-5 col-xs-offset-7">
+				<h1 class="block-title">Work all day.</h1>
+				<p class='lead text-muted'>Gest has a 500mah battery so you can work
+        with your hands all day</p>
+				<p>
+        The San Francisco Bay Area faces a housing crisis.  With far more people
+        wanting to live here than there are homes, rents have risen to record
+        heights.  However, building new housing isn't easy, with concerns about
+        traffic, views, gentrification, and open space, to name just a few.
+        Still, the problem can be solved, though not by San Francisco alone.
+        You'll have to plan and build regionally.
+				</p>
 
       </div>
     </div>
   </div>
   </section>
-
   <section>
-  <div class="block-fill-height p-b-xl p-t-xl">
-    <div class="row">
-      <div class="specs col-xs-12 col-sm-6 col-sm-offset-2">
-
-        Pause at finger view
+  <div class="block block-fill-height p-b-xl p-t-xl p-r-lg" style="background-color: transparent">
+    <div class="row p-r-lg">
+      <div class="specs col-xs-5 col-xs-offset-7">
+				<h1 class="block-title">Universal.</h1>
+				<p class='lead text-muted'>Gest was designed with comfort and
+        versatility in mind.</p>
+				<p>
+        No matter how big or small your hand is, we've designed Gest to fit it
+        prefectly. Adjustable finger mounts let you snap the sensors on to your
+        fingers with ease.
+				</p>
 
       </div>
     </div>
@@ -139,19 +78,9 @@
 
 </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="/onescroll.min.js"></script>
 
-    <script src="/js/toolkit.js"></script>
-		<script async type="text/javascript" src="https://www.trycelery.com/js/celery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
-		<!-- Google Analytics -->
-		<script>
-			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-			ga('create', 'UA-60560705-4', 'auto');
-			ga('send', 'pageview');
-		</script>
-		<script async src='//www.google-analytics.com/analytics.js'></script>
-		<!-- End Google Analytics -->
-  </body>
-</html>
+<script src="/onescroll.min.js"></script>
+
+{{> footer_end }}

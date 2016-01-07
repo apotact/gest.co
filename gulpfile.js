@@ -14,8 +14,6 @@ var handlebars	 = require('gulp-compile-handlebars');
 var debug 			 = require('gulp-debug');
 var del 				 = require('del');
  
-//TODO: what fonts are we using? do i need enotype?
-
 var Paths = {
   HERE                 : './',
 	PARTIALS						 : ['src/partials/'], // Array of directories of partials
