@@ -21,13 +21,17 @@ to the remote live repo
 
 Use gulp to run various tasks related to moving, building, and minifying files.
 
-`gulp compile`
+`gulp clean` - removes the `dist` directory which contains all the compiled
+files
 
-`gulp deploy` 
+`gulp compile` - compiles the src folder into `dist` as a static site
 
-`gulp server`
+`gulp deploy` - compile and deploy source to our production server
 
-See `gulpfile.js` for more information
+`gulp server` - Runs a local server to view the site. Gulp will watch for file
+changes and recompile automatically.
+
+See `gulpfile.js` to see all the tasks available.
 
 ### Hierarchy
 
