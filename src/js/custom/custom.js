@@ -4,8 +4,38 @@
   // ENTER CLASS DEFINITION
   // ======================
 
-$("#play-video").on('hidden.bs.modal', function (e) { $("#play-video iframe").attr("src", $("#play-video iframe").attr("src"));
-});
+
+if (window.location.pathname === "/") {
+  $("#play-video").on('hidden.bs.modal', function (e) { $("#play-video iframe").attr("src", $("#play-video iframe").attr("src"));});
+
+  var fadeInSR = {
+    delay   : 80,
+    easing : 'ease-in-out',
+		viewFactor : 0.1,
+    opacity: 0,
+		scale: 1,
+		distance : '0px',
+    reset: false
+  };
+
+  var slideUpSR = {
+		delay    : 200,
+		distance : '90px',
+		easing   : 'ease-in-out',
+		scale    : .9,
+		reset		 : false
+
+  };
+
+  // Changing the defaults
+  window.sr = ScrollReveal({ reset: false });
+
+  // Customizing a reveal set
+  sr.reveal( '.reveal-slide', slideUpSR);
+	sr.reveal( '.reveal-fade', fadeInSR);
+}
+
+
 
 }(jQuery);
 
