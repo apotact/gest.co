@@ -58,6 +58,8 @@ if (window.location.pathname === "/") {
   // ======================
 if (window.location.pathname === "/technology.html" || window.location.pathname === "/technology" ){
 
+	
+
   var currentSection = 1;
   var nextSection;
 
@@ -100,6 +102,12 @@ if (window.location.pathname === "/technology.html" || window.location.pathname 
          cancelAnimationFrame(globalID);
          globalID2 = requestAnimationFrame(forwardPlayback);
        }
+			 else if (currentSection === 1 && index === 3) {
+         vid.play();
+         cancelAnimationFrame(globalID);
+         globalID2 = requestAnimationFrame(forwardPlayback);
+
+       }
        /* backwards playback */
        else if (currentSection === 3 && index === 2){
          console.log("3->2");
@@ -121,9 +129,17 @@ if (window.location.pathname === "/technology.html" || window.location.pathname 
          cancelAnimationFrame(globalID2);
          globalID = requestAnimationFrame(reversePlayback);
        }
+			 else if (currentSection === 3 && index === 1) {
+         fpsInterval = 1000 / 30;
+         then = Date.now();
+         startTime = then;
+         console.log(startTime);
+         cancelAnimationFrame(globalID2);
+         globalID = requestAnimationFrame(reversePlayback);
+
+       }
 
         currentSection = index;
-
 
      },  
      afterMove: function(index) {
@@ -168,6 +184,11 @@ if (window.location.pathname === "/technology.html" || window.location.pathname 
 
     }
 
+		if(window.location.hash) {
+				// TODO: hack ignore hash on page load, default to 1
+				var hash = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+				$(".blowout").moveTo(1);
+		}
     
   }
 
