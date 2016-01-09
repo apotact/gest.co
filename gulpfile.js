@@ -17,6 +17,7 @@ var del 				 = require('del');
 var Paths = {
   HERE                 : './',
 	PARTIALS						 : ['src/partials/'], // Array of directories of partials
+	PARTIALS_WATCH 			 : ['src/partials/', 'src/partials/*', 'src/partials/**/**'],
 	ASSETS							 : 'src/assets/**/*',
 	PAGES 						   : 'src/*.hbs',
   DIST                 : 'dist',
@@ -46,7 +47,7 @@ gulp.task('watch', function () {
 // TODO: update watch 
   gulp.watch(Paths.LESS, ['less-min']);
   gulp.watch(Paths.JS,   ['js-min']);
-	gulp.watch(Paths.PARTIALS, ['compile']);
+	gulp.watch(Paths.PARTIALS_WATCH, ['compile']);
 	gulp.watch(Paths.PAGES, ['compile']);
 	gulp.watch(Paths.ASSETS, ['compile', 'cp:assets']);
 })

@@ -8,6 +8,8 @@ if (window.location.pathname === "/") {
 
   $("#play-video").on('hidden.bs.modal', function (e) { $("#play-video iframe").attr("src", $("#play-video iframe").attr("src"));});
 
+}
+
   var fadeInSR = {
     delay   : 80,
     easing : 'ease-in-out',
@@ -27,13 +29,22 @@ if (window.location.pathname === "/") {
 
   };
 
+  var slideDownSR = {
+    origin   : 'top',
+		delay    : 333,
+		distance : '90px',
+		easing   : 'ease-in-out',
+		scale    : 1,
+		reset		 : false
+  };
+
   // Changing the defaults
   window.sr = ScrollReveal({ reset: false });
 
   // Customizing a reveal set
   sr.reveal( '.reveal-slide', slideUpSR);
 	sr.reveal( '.reveal-fade', fadeInSR);
-}
+  sr.reveal('.reveal-slide-down', slideDownSR);
 
 
 
