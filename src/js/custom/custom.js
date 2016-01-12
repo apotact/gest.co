@@ -1,8 +1,4 @@
 +function ($) {
-  'use strict';
-
-  // ENTER CLASS DEFINITION
-  // ======================
 
 if (window.location.pathname === "/") {
 
@@ -52,10 +48,7 @@ if (window.location.pathname === "/") {
 
 /* used for page /technology.html only */
 +function ($) {
-  'use strict';
 
-  // ENTER CLASS DEFINITION
-  // ======================
 if (window.location.pathname === "/technology.html" || window.location.pathname === "/technology" ){
 
 	
