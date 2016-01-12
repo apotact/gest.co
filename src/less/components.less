@@ -250,17 +250,11 @@ h6, .h6 {
 
 }
 
-.play-video,svg 
 .play-video {
-  background-size: 20px 20px;
-  background-image: url("/img/right-arrow-circle.svg");
-  background-position: left center;
-  padding-left: 25px;
   display: inline-block;
-  background-repeat: no-repeat;
   color: #000;
   text-decoration: none;
-opacity: .6;
+  opacity: .6;
 }
 .modal-backdrop
 {
@@ -350,9 +344,21 @@ opacity: .6;
   color: #333;
 }
 
+.title-code {
+  font-family: courier;
+
+}
+@media screen and (max-width: 768px) {
+.title-code {
+  font-size: 24px;
+}
+
+}
+
 .block-dev {
   background: url(/img/backgrounds/dev4.png) repeat;
   color: #ddd;
+  font-size: 17px;
 	a {
 		color: #eee;
 		text-decoration: underline;
