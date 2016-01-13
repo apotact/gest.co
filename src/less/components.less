@@ -76,6 +76,9 @@
 @import "./custom/pull-quote.less";
 @import "./custom/stage.less";
 
+// Gest custom components
+@import "./custom/technology-page.less";
+
 /*
  * Minimal Application level overrides
  * (things that dont make sense in a toolkit :)
@@ -192,74 +195,20 @@
 //
 // Custom styles
 //
+//
 
-// Tech page, xs and sm device resolutions
-@media (max-width: @screen-sm-max) { 
-html, body {
-height: 101%;
-}
- }
-
-// Tech page, md and large resolutions
-@media (min-width: @screen-md-min) {  }
-
-video::-webkit-media-controls-enclosure {
-    display:none !important;
-}
-video::-webkit-media-controls {
-    display:none !important;
+.stage-shelf {
+	z-index: 1;
 }
 
 .transparent {
   background-color: transparent;
 }
 
-
 .v-center {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-}
-
-.v-tech-center {
-  position: relative;
-  top: 40%;
-  transform: translateY(-60%);
-}
-
-.tech-block-fill-height {
-  display: table;
-  width: 100%;
-  height: 95vh;
-}
-
-@media (min-width: 768px) {
-  .tech-block-fill-height {
-    height: 80vh;
-  }
-}
-
-@media (max-width:768px) {
-  .v-tech-center {
-    position: relative;
-    top: 20%;
-  }
-  .block-xs-bottom { 
-    top: -52px;
-
-  }
-  .h1.block-title, h1.block-title {
-    font-size: 20px;
-  }
-  p {
-    font-size: 12px;
-  }
-  p.lead {
-    font-size: 14px !important;
-    padding: 0 0 0 0 ;
-    margin-bottom: 5px;
-
-  }
 }
 
 h1, h2, h3, h4, h5, h6,

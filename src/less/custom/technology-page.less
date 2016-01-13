@@ -1,0 +1,102 @@
+
+/***************************** TECH ************************/
+
+// XS 
+.tech-block-fill-height {
+  display: table;
+  width: 100%;
+  height: 95vh;
+}
+
+.tech-title  {
+	font-size: 25px;
+}
+.tech-lead { 
+	font-size: 18px;
+	padding: 0 0 0 0 ;
+	margin-bottom: 5px;
+}
+.tech-text {
+	font-size: 15px;
+}
+
+.techpage p.lead {
+	font-size: 14px !important;
+	padding: 0 0 0 0 ;
+	margin-bottom: 5px;
+}
+
+.v-tech-center {
+	position: relative;
+}
+
+.block-xs-bottom { 
+	top: -52px;
+}
+
+
+// Small devices
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {  
+	.tech-title  {
+    font-size: 35px;
+	}
+	.tech-lead { 
+    font-size: 20px;
+    padding: 0 0 0 0 ;
+    margin-bottom: 5px;
+	}
+	.tech-text {
+		font-size: 15px;
+	}
+	.tech-block-fill-height {
+		height: 75vh;
+	}
+
+	.v-tech-center {
+		top: 40%;
+		transform: translateY(-60%);
+	}
+}
+
+// Tech page, md and large resolutions
+@media (min-width: @screen-md-min) {  
+
+	.tech-title  {
+    font-size: 60px;
+	}
+	.tech-lead { 
+    font-size: 24px;
+    padding: 0 0 0 0 ;
+    margin-bottom: 5px;
+	}
+	.tech-text {
+		font-size: 20px;
+	}
+
+  .tech-block-fill-height {
+    height: 80vh;
+  }
+
+  .techpage p.lead {
+    font-size: 35px !important;
+    padding: 0 0 0 0 ;
+    margin-bottom: 5px;
+  }
+
+  .v-tech-center {
+    top: 50%;
+		transform: translateY(-60%);
+  }
+
+  .block-xs-bottom { 
+    top: -52px;
+  }
+
+}
+
+video::-webkit-media-controls-enclosure {
+    display:none !important;
+}
+video::-webkit-media-controls {
+    display:none !important;
+}
