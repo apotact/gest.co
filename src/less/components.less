@@ -76,6 +76,9 @@
 @import "./custom/pull-quote.less";
 @import "./custom/stage.less";
 
+// Gest custom components
+@import "./custom/technology-page.less";
+
 /*
  * Minimal Application level overrides
  * (things that dont make sense in a toolkit :)
@@ -90,11 +93,15 @@
 /* navbar */
 .app-navbar {
   font-size: 13px;
-	z-index: 10000;
   letter-spacing: .15em;
+	background-color: transparent;
 }
 .app-navbar .navbar-brand {
   font-size: 13px;
+}
+
+.navbar, .navbar-default, .navbar-nav, .navbar-header { 
+	z-index: 100000;
 }
 
 
@@ -188,21 +195,20 @@
 //
 // Custom styles
 //
+//
 
-html {
-  background: #1b1c1d;
+.stage-shelf {
+	z-index: 1;
+}
+
+.transparent {
+  background-color: transparent;
 }
 
 .v-center {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-}
-
-.v-tech-center {
-  position: relative;
-  top: 40%;
-  transform: translateY(-60%);
 }
 
 h1, h2, h3, h4, h5, h6,
