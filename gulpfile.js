@@ -21,7 +21,7 @@ var Paths = {
 	ASSETS							 : 'src/assets/**/*',
 	PAGES 						   : 'src/*.hbs',
   DIST                 : 'dist',
-  DIST_TOOLKIT_JS      : 'dist/toolkit.js',
+  DIST_TOOLKIT_JS      : 'dist/js/toolkit.js',
   LESS_TOOLKIT_SOURCES : 'src/less/toolkit*',
   LESS                 : 'src/less/**/**',
   JS                   : [
