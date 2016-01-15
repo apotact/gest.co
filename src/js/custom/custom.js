@@ -91,13 +91,11 @@ if (isMobile) {
        nextSection = index;
 
        if (currentSection === 1 && index === 2){
-         console.log("1->2");
          vid.play();
          cancelAnimationFrame(globalID);
          globalID2 = requestAnimationFrame(forwardPlayback);
        }
        else if (currentSection === 2 && index === 3){
-         console.log("2->3");
          vid.play();
          cancelAnimationFrame(globalID);
          globalID2 = requestAnimationFrame(forwardPlayback);
@@ -110,8 +108,6 @@ if (isMobile) {
        }
        /* backwards playback */
        else if (currentSection === 3 && index === 2){
-         console.log("3->2");
-         
          fpsInterval = 1000 / 30;
          then = Date.now();
          startTime = then;
@@ -120,8 +116,6 @@ if (isMobile) {
          globalID = requestAnimationFrame(reversePlayback);
        }
        else if (currentSection === 2 && index === 1){
-         console.log("2->1");
-
          fpsInterval = 1000 / 30;
          then = Date.now();
          startTime = then;
@@ -143,6 +137,7 @@ if (isMobile) {
 
      },  
      afterMove: function(index) {
+				ga('send', 'event', 'technology', 'scroll', 'section-'+index);
      },
      loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
      keyboard: true,                  // You can activate the keyboard controls
