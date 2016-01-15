@@ -13,6 +13,7 @@ var deploy       = require('gulp-deploy-git')
 var handlebars	 = require('gulp-compile-handlebars');
 var debug 			 = require('gulp-debug');
 var del 				 = require('del');
+var uncss  			 = require('gulp-uncss');
  
 var Paths = {
   HERE                 : './',
@@ -41,15 +42,16 @@ var Paths = {
     ]
 }
 
-gulp.task('default', ['compile', 'less-min', 'js-min'])
+// Cleans and builds the site from scratch for development purposes
+gulp.task('default', ['clean', 'build', 'less-min', 'js-min'])
 
+// Runs appropriate tasks when files have been modified
 gulp.task('watch', function () {
-// TODO: update watch 
   gulp.watch(Paths.LESS, ['less-min']);
   gulp.watch(Paths.JS,   ['js-min']);
-	gulp.watch(Paths.PARTIALS_WATCH, ['compile']);
-	gulp.watch(Paths.PAGES, ['compile']);
-	gulp.watch(Paths.ASSETS, ['compile', 'cp:assets']);
+	gulp.watch(Paths.PARTIALS_WATCH, ['build']);
+	gulp.watch(Paths.PAGES, ['build']);
+	gulp.watch(Paths.ASSETS, ['build', 'cp:assets']);
 })
 
 gulp.task('view', ['server'], function () {
@@ -65,6 +67,7 @@ gulp.task('server', ['watch'], function () {
   })
 })
 
+// Builds less for local development with sourcemaps
 gulp.task('less', function () {
   return gulp.src(Paths.LESS_TOOLKIT_SOURCES)
     .pipe(sourcemaps.init())
@@ -74,6 +77,7 @@ gulp.task('less', function () {
     .pipe(gulp.dest(Paths.DIST+'/css'))
 })
 
+// Builds minified less for local development with sourcemaps
 gulp.task('less-min', ['less'], function () {
   return gulp.src(Paths.LESS_TOOLKIT_SOURCES)
     .pipe(sourcemaps.init())
@@ -87,12 +91,30 @@ gulp.task('less-min', ['less'], function () {
     .pipe(gulp.dest(Paths.DIST+'/css'))
 })
 
+// Builds minified css from less files, and removes unused CSS classes for production
+gulp.task('less-min-prod', function () {
+  return gulp.src(Paths.LESS_TOOLKIT_SOURCES)
+    .pipe(less())
+		.pipe(uncss({
+			html: ['dist/index.html', 'dist/about.html', 'dist/mike.html', 'dist/technology.html', 'dist/technology-m.html', 'dist/orders.html'],
+			ignore: ['.modal', '.modal-backdrop', '.modal-open']
+		}))
+    .pipe(minifyCSS())
+    .pipe(autoprefixer())
+    .pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(gulp.dest(Paths.DIST+'/css'))
+})
+
+// Concats JS files into a single toolkit
 gulp.task('js', function () {
   return gulp.src(Paths.JS)
     .pipe(concat('toolkit.js'))
     .pipe(gulp.dest(Paths.DIST+'/js'))
 })
 
+// Concats and minifies JS files into a single toolkit
 gulp.task('js-min', ['js'], function () {
   return gulp.src(Paths.DIST_TOOLKIT_JS)
     .pipe(uglify())
@@ -113,7 +135,8 @@ gulp.task('clean', function() {
 	return del([Paths.DIST]);
 });
 
-gulp.task('compile', ['less-min', 'js-min', 'cp:assets'], function () {
+// Builds the handlebar templates and puts in DIST
+gulp.task('build', function() {
 	var templateOptions = {
 		batch: Paths.PARTIALS
 	}
@@ -127,8 +150,16 @@ gulp.task('compile', ['less-min', 'js-min', 'cp:assets'], function () {
 		.pipe(gulp.dest('dist'));
 });
 
+gulp.task('dev', ['build', 'less-min', 'js-min', 'cp:assets'], function () {
+	return;
+});
 
-gulp.task('test-deploy', ['compile'], function() {
+gulp.task('prod', ['build', 'less-min-prod', 'js-min', 'cp:assets'], function() {
+	return del(['dist/js/toolkit.js']);
+});
+
+
+gulp.task('test-deploy', ['prod'], function() {
 	return gulp.src('dist/**/*')
 		.pipe(deploy({
 			repository: 'git@github.com:apotact/gest.co-staging.git',
@@ -138,7 +169,7 @@ gulp.task('test-deploy', ['compile'], function() {
 			}));
 });
 
-gulp.task('deploy', ['compile'], function() {
+gulp.task('deploy', ['prod'], function() {
 	return gulp.src('dist/**/*')
 		.pipe(deploy({
 			repository: 'getgest@banks.dreamhost.com:gest.git',
