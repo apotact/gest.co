@@ -169,7 +169,7 @@ gulp.task('test-deploy', ['prod'], function() {
 			}));
 });
 
-gulp.task('deploy', ['clean', 'prod'], function() {
+gulp.task('deploy', ['prod'], function() {
 	return gulp.src('dist/**/*')
 		.pipe(deploy({
 			repository: 'getgest@banks.dreamhost.com:gest.git',
