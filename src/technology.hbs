@@ -1,8 +1,17 @@
-  {{> header }}
-    <link href="/onescroll.css" rel="stylesheet">
-  {{> header_end }} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-  {{> nav }}
+{{> head}}
+
+  <link href="/onescroll.css" rel="stylesheet">
+
+{{> head_scripts}}
+
+</head>
+<body> 
+
+{{> nav}}
 
 </div> <!-- end shelf for mobile -->
 
@@ -62,8 +71,20 @@
 
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/onescroll.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.0.6/scrollreveal.min.js"></script>
+    <script src="/js/toolkit.min.js"></script>
+		<script async type="text/javascript" src="https://www.trycelery.com/js/celery.js"></script>
 
-<script src="/onescroll.min.js"></script>
+		<!-- Google Analytics -->
+		<script>
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', 'UA-60560705-4', 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script async src='//www.google-analytics.com/analytics.js'></script>
+		<!-- End Google Analytics -->
 
-{{> footer_end }}
+</body>
+</html>
